@@ -1,0 +1,501 @@
+/* styles.css */
+
+/* ==================== PARTIE LOGIN (CONSERVÉE) ==================== */
+.login-grid {
+    -fx-padding: 30px;
+    -fx-hgap: 10px;
+    -fx-vgap: 15px;
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(to bottom right, #141E30, #243B55);
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+.login-grid .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+}
+
+.login-grid .text-field, 
+.login-grid .password-field {
+    -fx-pref-width: 280px;
+    -fx-font-size: 14px;
+    -fx-padding: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+}
+
+.login-grid .text-field:focused, 
+.login-grid .password-field:focused {
+    -fx-border-color: #ffcc00;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+.login-grid .text-field .prompt-text, 
+.login-grid .password-field .prompt-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}
+
+.login-grid .button {
+    -fx-background-color: linear-gradient(to right, #ff416c, #ff4b2b);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 25px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 7, 0, 0, 3);
+}
+
+.login-grid .button:hover {
+    -fx-background-color: linear-gradient(to right, #ff4b2b, #ff416c);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.login-grid .button:pressed {
+    -fx-background-color: #d1001f;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+/* ============ THÈME DARK MODE PRÉMIUM ============ */
+.root {
+    -fx-background-color: #0a0e17;
+    -fx-font-family: 'Poppins', 'SF Pro Display', sans-serif;
+    -fx-accent-color: #6d28d9;
+    -fx-secondary-color: #10b981;
+    -fx-text-color: #e2e8f0;
+    -fx-glass-effect: rgba(255, 255, 255, 0.05);
+}
+
+/* ============ BARRE SUPÉRIEURE ============ */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #0f172a, #1e293b);
+    -fx-padding: 15px 30px;
+    -fx-border-color: rgba(255, 255, 255, 0.03);
+    -fx-border-width: 0 0 1px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 25, 0, 0, 5);
+    -fx-backdrop-filter: blur(15px);
+}
+
+.top-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-padding: 8px 20px;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.top-bar .button:hover {
+    -fx-background-color: rgba(109, 40, 217, 0.1);
+    -fx-text-fill: #a5b4fc;
+}
+
+/* ============ PANELS LATÉRAUX ============ */
+.side-panel {
+    -fx-background-color: rgba(15, 23, 42, 0.7);
+    -fx-border-color: rgba(255, 255, 255, 0.03);
+    -fx-padding: 25px;
+    -fx-spacing: 20px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0, 0, 0);
+}
+
+.side-panel .label {
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-padding: 0 0 15px 0;
+}
+
+/* ============ LISTES DE CONTACTS ============ */
+.contact-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5px;
+}
+
+.contact-list .list-cell {
+    -fx-background-color: rgba(30, 41, 59, 0.5);
+    -fx-background-radius: 12px;
+    -fx-padding: 18px 20px;
+    -fx-margin: 0 0 10px 0;
+    -fx-text-fill: #e2e8f0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 2);
+    -fx-transition: all 0.25s ease-out;
+}
+
+.contact-list .list-cell:filled:hover {
+    -fx-background-color: rgba(109, 40, 217, 0.2);
+    -fx-translate-y: -3px;
+}
+
+.contact-list .list-cell:filled:selected {
+    -fx-background-color: rgba(109, 40, 217, 0.3);
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.5), 15, 0, 0, 3);
+}
+
+/* ============ ZONE DE CHAT ============ */
+.chat-container {
+    -fx-background-color: rgba(15, 23, 42, 0.6);
+    -fx-background-radius: 18px;
+    -fx-padding: 25px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0, 0, 0);
+}
+
+.chat-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e2e8f0;
+    -fx-font-size: 14px;
+    -fx-padding: 0;
+}
+
+/* ============ INPUT MESSAGE ============ */
+.message-input {
+    -fx-background-color: rgba(30, 41, 59, 0.8);
+    -fx-background-radius: 15px;
+    -fx-padding: 16px 22px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #e2e8f0;
+    -fx-border-color: rgba(255, 255, 255, 0.05);
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 12, 0, 0, 3);
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.3);
+}
+
+/* ============ BOUTON ENVOYER ============ */
+.send-btn {
+    -fx-background-color: linear-gradient(to right, #6d28d9, #7c3aed);
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-padding: 16px 28px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.5), 15, 0, 0, 4);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-btn:hover {
+    -fx-background-color: linear-gradient(to right, #7c3aed, #8b5cf6);
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.7), 20, 0, 0, 6);
+    -fx-translate-y: -3px;
+}
+
+.send-btn:pressed {
+    -fx-background-color: #5b21b6;
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.3), 8, 0, 0, 2);
+    -fx-translate-y: 0;
+}
+
+/* ============ BOUTONS D'ACTION ============ */
+.action-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.07);
+    -fx-text-fill: #e2e8f0;
+    -fx-font-weight: 500;
+    -fx-padding: 12px 20px;
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.08);
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.25s ease;
+}
+
+.action-btn:hover {
+    -fx-background-color: rgba(109, 40, 217, 0.15);
+    -fx-text-fill: #a78bfa;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes float {
+    0% { -fx-translate-y: 0; }
+    50% { -fx-translate-y: -4px; }
+    100% { -fx-translate-y: 0; }
+}
+
+@keyframes pulse {
+    0% { -fx-opacity: 0.7; -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-opacity: 1; -fx-scale-x: 1.03; -fx-scale-y: 1.03; }
+    100% { -fx-opacity: 0.7; -fx-scale-x: 1; -fx-scale-y: 1; }
+}
+
+.notification {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 20, 0, 0, 5);
+    -fx-animation: float 3.5s ease-in-out infinite;
+}
+
+.new-message-indicator {
+    -fx-animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============ SCROLLBARS ============ */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-transition: all 0.2s ease;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ============ ÉLÉMENTS SPÉCIAUX ============ */
+.status-indicator {
+    -fx-stroke: #6d28d9;
+    -fx-stroke-width: 2px;
+    -fx-fill: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.5), 5, 0, 0, 1);
+}
+
+.progress-spinner {
+    -fx-progress-color: #6d28d9;
+    -fx-effect: dropshadow(gaussian, rgba(109, 40, 217, 0.5), 10, 0, 0, 3);
+}
+
+/* ============ MEDIA QUERIES ============ */
+@media (max-width: 1200px) {
+    .side-panel {
+        -fx-padding: 15px;
+    }
+    
+    .contact-list .list-cell {
+        -fx-padding: 14px 16px;
+    }
+}
+
+/* styles.css */
+
+/* Styles de base */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-base: #4CAF50;
+    -fx-accent: #8BC34A;
+    -fx-default-button: #4CAF50;
+    -fx-focus-color: #8BC34A;
+}
+
+/* Barre supérieure */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #4CAF50, #8BC34A);
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-right;
+}
+
+.top-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 4px;
+    -fx-padding: 5px 10px;
+}
+
+.top-bar .button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Panneaux latéraux */
+.left-panel, .right-panel {
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 0 1px 0 0;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+.right-panel {
+    -fx-border-width: 0 0 0 1px;
+}
+
+/* ListView des contacts et groupes */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.list-cell {
+    -fx-padding: 8px;
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #e8f5e9;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #c8e6c9;
+}
+
+/* Zone de chat */
+.center-panel {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+.chat-area {
+    -fx-text-fill: black; /* Ajoutez cette ligne */
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-effect: inner-shadow(one-pass-box, rgba(0,0,0,0.05), 2, 0, 0, 0);
+}
+
+/* Zone de saisie de message */
+.chat-input-box {
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+
+.message-field {
+    -fx-pref-height: 35px;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-padding: 0 15px;
+    -fx-font-size: 14px;
+}
+
+.send-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 20px;
+    -fx-font-weight: bold;
+}
+
+.send-button:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Boutons généraux */
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 15px;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #388E3C;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #424242;
+}
+
+/* Indicateur de progression */
+.progress-indicator {
+    -fx-progress-color: #4CAF50;
+}
+
+/* Styles spécifiques pour les boutons d'action */
+.add-contact-button, .remove-contact-button, 
+.create-group-button, .add-member-button {
+    -fx-background-color: #2196F3;
+}
+
+.add-contact-button:hover, .remove-contact-button:hover, 
+.create-group-button:hover, .add-member-button:hover {
+    -fx-background-color: #1976D2;
+}
+
+/* Style pour le bouton de déconnexion */
+.logout-button {
+    -fx-background-color: #f44336;
+}
+
+.logout-button:hover {
+    -fx-background-color: #d32f2f;
+}
+
+.history-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.chat-area {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-color: #f9f9f9;
+}
+
+.message-status {
+    -fx-font-size: 10px;
+    -fx-text-fill: #666;
+}
+
+.list-cell {
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e0e0e0;
+}
+
+.status-online {
+    -fx-text-fill: #2ecc71;
+}
+
+.status-offline {
+    -fx-text-fill: #e74c3c;
+}
+
+.status-away {
+    -fx-text-fill: #f39c12;
+}
+
+.status-busy {
+    -fx-text-fill: #c0392b;
+}
+
+
+
+/* Add to your existing CSS */
+.register-grid {
+    -fx-padding: 30px;
+    -fx-hgap: 10px;
+    -fx-vgap: 15px;
+    -fx-alignment: center;
+    -fx-background-color: linear-gradient(to bottom right, #141E30, #243B55);
+}
+
+.register-grid .text-field, 
+.register-grid .password-field {
+    -fx-pref-width: 280px;
+    -fx-font-size: 14px;
+    -fx-padding: 12px;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-text-fill: white;
+}
+
+.register-grid .text-field:focused, 
+.register-grid .password-field:focused {
+    -fx-border-color: #ffcc00;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}

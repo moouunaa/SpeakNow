@@ -1,0 +1,30 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "c:\\Users\\pc\\Downloads\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0.jar",
+            "c:\\Users\\pc\\Downloads\\openjfx-17.0.14_windows-x64_bin-sdk\\javafx-sdk-17.0.14\\lib\\*.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.base.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.controls.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.fxml.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.graphics.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.media.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.swing.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx.web.jar",
+            "c:\\Java\\javafx-sdk-23.0.2\\lib\\javafx-swt.jar"
+        ],
+        "exclude": [
+            "lib/javafx-swt.jar",
+            "lib/javafx.swing.jar",
+            "lib/javafx.web.jar",
+            "lib/javafx.media.jar",
+            "lib/javafx.graphics.jar",
+            "lib/javafx.base.jar",
+            "lib/javafx.controls.jar",
+            "lib/mysql-connector-j-9.2.0.jar",
+            "lib/javafx.fxml.jar"
+        ]
+    }
+}

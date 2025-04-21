@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "ClientFX",
+      "request": "launch",
+      "mainClass": "ClientFX",
+      "projectName": "chatapp_228734d7",
+      "vmArgs": "--module-path \"C:/Java/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics"
+    },
+    {
+      "type": "java",
+      "name": "Client",
+      "request": "launch",
+      "mainClass": "Client",
+      "projectName": "ProgrammationReseau_3e3ab20a",
+      "vmArgs": "--module-path \"C:/Java/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+    },
+    {
+      "type": "java",
+      "name": "Launch Server",
+      "request": "launch",
+      "mainClass": "Server",
+      "classPaths": [
+        "lib/mysql-connector-j-9.2.0.jar",
+        "bin"
+      ],
+      "vmArgs": "--module-path \"C:/Java/javafx-sdk-23.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}
+
