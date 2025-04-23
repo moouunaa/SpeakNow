@@ -25,3 +25,13 @@ java -cp "bin;lib/mysql-connector-j-9.2.0.jar" Server
 
 javac --module-path "C:\Java\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -d bin src/ClientFX.java
 java --module-path "C:\Java\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -cp bin ClientFX
+
+
+
+
+## after adding encryption
+javac --module-path "C:\Java\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -cp "lib/bcprov-jdk18on-1.80.jar" -d bin src/*.java
+
+java -cp "bin;lib/mysql-connector-j-9.2.0.jar;lib/bcprov-jdk18on-1.80.jar" Server
+
+java --module-path "C:\Java\javafx-sdk-23.0.2\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -cp "bin;lib/bcprov-jdk18on-1.80.jar" ClientFX
